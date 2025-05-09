@@ -306,9 +306,69 @@
                 max-width: 100%;
             }
         }
+        .welcome-splash {
+            position: fixed;
+            z-index: 9999;
+            top: 0; left: 0; width: 100vw; height: 100vh;
+            background: linear-gradient(120deg, #25d366 0%, #2c3e50 100%);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.7s;
+            opacity: 1;
+        }
+        .welcome-content {
+            color: #fff;
+            text-align: center;
+            width: 100vw;
+            max-width: 90vw;
+        }
+        .welcome-title {
+            font-size: 2.7rem;
+            font-weight: 800;
+            letter-spacing: 2px;
+            margin-bottom: 0.7em;
+            text-shadow: 0 6px 24px rgba(0,0,0,0.25);
+        }
+        .welcome-tagline {
+            font-size: 1.3rem;
+            margin-bottom: 2.2em;
+            opacity: 0.92;
+            font-weight: 500;
+            letter-spacing: 1px;
+        }
+        .welcome-loader {
+            margin: 0 auto;
+            border: 6px solid #fff;
+            border-top: 6px solid #25d366;
+            border-radius: 50%;
+            width: 54px;
+            height: 54px;
+            animation: spinSplash 1s linear infinite;
+            box-shadow: 0 2px 16px #25d36644;
+        }
+        @keyframes spinSplash {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+        @media (max-width: 600px) {
+            .welcome-title { font-size: 1.5rem; }
+            .welcome-tagline { font-size: 1rem; }
+            .welcome-loader { width: 38px; height: 38px; border-width: 4px; }
+        }
     </style>
 </head>
 <body>
+    <!-- Welcome Splash Page -->
+    <div id="welcomeSplash" class="welcome-splash">
+      <div class="welcome-content">
+        <h1 class="welcome-title">DAHIYA GENERATORS</h1>
+        <div class="welcome-tagline">Welcome | स्वागत है</div>
+        <div class="welcome-loader"></div>
+      </div>
+    </div>
+
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
         <div class="container">
@@ -566,6 +626,14 @@
         var modal = new bootstrap.Modal(document.getElementById('generatorImageModal'));
         modal.show();
       });
+    });
+    // Welcome splash logic
+    window.addEventListener('DOMContentLoaded', function() {
+      var splash = document.getElementById('welcomeSplash');
+      setTimeout(function() {
+        splash.style.opacity = 0;
+        setTimeout(function() { splash.style.display = 'none'; }, 700);
+      }, 3000);
     });
     </script>
 </body>
