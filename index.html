@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DAHIYA GENERATORS - All Types Generators Available</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #e74c3c;
+            --accent-color: #25d366;
+        }
+        
+        body {
+            font-family: 'Roboto', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f7f9fa;
+        }
+
+        .hero-section {
+            position: relative;
+            min-height: 60vh;
+            padding: 0;
+        }
+
+        .hero-section .carousel-inner img {
+            filter: brightness(0.7);
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(44,62,80,0.35) 0%, rgba(39,174,96,0.10) 100%);
+            z-index: 1;
+        }
+
+        .hero-section .container.text-center {
+            z-index: 2;
+        }
+
+        .text-shadow {
+            color: #fff !important;
+            text-shadow: 0 6px 24px rgba(0,0,0,0.85), 0 2px 4px rgba(0,0,0,0.7);
+        }
+
+        .btn-primary {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            font-weight: 700;
+            letter-spacing: 1px;
+            transition: background 0.2s, transform 0.2s;
+            box-shadow: 0 2px 8px rgba(231,76,60,0.15);
+        }
+
+        .btn-primary:hover {
+            background-color: #c0392b;
+            border-color: #c0392b;
+            transform: translateY(-2px) scale(1.04);
+        }
+
+        section {
+            padding-top: 60px;
+            padding-bottom: 60px;
+        }
+
+        .bg-light {
+            background: linear-gradient(90deg, #f7f9fa 60%, #eaf6f3 100%);
+        }
+
+        .product-card, .feature-card {
+            border: none;
+            box-shadow: 0 4px 16px rgba(44,62,80,0.08);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 16px;
+        }
+
+        .product-card:hover, .feature-card:hover {
+            transform: translateY(-8px) scale(1.02);
+            box-shadow: 0 8px 32px rgba(44,62,80,0.18);
+        }
+
+        .badge-capacity {
+            background: var(--accent-color);
+            color: #fff;
+            font-size: 1em;
+            margin: 0 6px 8px 0;
+            padding: 8px 16px;
+            border-radius: 20px;
+            display: inline-block;
+            font-weight: 500;
+            box-shadow: 0 2px 8px rgba(37,211,102,0.08);
+        }
+
+        .contact-info {
+            margin-top: 20px;
+            padding: 20px;
+            background: rgba(44,62,80,0.7);
+            border-radius: 10px;
+        }
+
+        .contact-info h4, .contact-info p {
+            color: #fff;
+        }
+
+        .footer-gradient {
+            background: linear-gradient(90deg, #2c3e50 60%, #25d366 100%);
+        }
+
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25d366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            text-align: center;
+            font-size: 30px;
+            box-shadow: 2px 2px 3px rgba(0,0,0,0.2);
+            z-index: 100;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: all 0.3s ease;
+        }
+
+        .whatsapp-float:hover {
+            background-color: #128C7E;
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .hindi-text {
+            font-size: 1.1em;
+        }
+
+        @media (max-width: 768px) {
+            .hero-section .container.text-center {
+                top: 40%;
+            }
+            .product-card, .feature-card {
+                margin-bottom: 24px;
+            }
+            section {
+                padding-top: 32px;
+                padding-bottom: 32px;
+            }
+        }
+
+        .features-row-mobile {
+            scrollbar-width: thin;
+            scrollbar-color: #25d366 #eaf6f3;
+        }
+        .min-width-feature {
+            min-width: 170px;
+            max-width: 200px;
+            padding: 0.75rem !important;
+        }
+        .feature-card .fa-3x {
+            font-size: 1.7em;
+        }
+        @media (min-width: 768px) {
+            .features-row-mobile {
+                flex-wrap: wrap !important;
+                overflow: visible !important;
+                justify-content: center;
+            }
+            .min-width-feature {
+                min-width: 0;
+                max-width: 100%;
+            }
+        }
+        #features.bg-light {
+            background: linear-gradient(120deg, #f7f9fa 60%, #eaf6f3 100%);
+        }
+        .feature-card {
+            background: #fff;
+            border: 1.5px solid #e0e0e0;
+            border-radius: 18px;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.06);
+            transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+            cursor: pointer;
+        }
+        .feature-card:active, .feature-card:hover {
+            box-shadow: 0 8px 24px rgba(44,62,80,0.13);
+            border-color: #25d366;
+            transform: translateY(-4px) scale(1.04);
+        }
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.7s forwards;
+        }
+        .fade-in-up[style*="animation-delay:0.1s"] { animation-delay: 0.1s; }
+        .fade-in-up[style*="animation-delay:0.2s"] { animation-delay: 0.2s; }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+        .contact-info-modern {
+            background: rgba(44,62,80,0.07);
+            border-radius: 14px;
+            padding: 24px 12px 12px 12px;
+            box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+        }
+        .contact-card {
+            border: none;
+            border-radius: 12px;
+            background: #fff;
+            box-shadow: 0 2px 8px rgba(44,62,80,0.06);
+            transition: box-shadow 0.2s, transform 0.2s;
+        }
+        .contact-card:hover {
+            box-shadow: 0 8px 24px rgba(44,62,80,0.13);
+            transform: translateY(-2px) scale(1.02);
+        }
+        .contact-card .btn-success {
+            font-weight: 500;
+            border-radius: 8px;
+            font-size: 1em;
+        }
+        .contact-card .btn-success i {
+            font-size: 1.2em;
+        }
+        .contact-card a.text-dark:hover {
+            color: #25d366 !important;
+        }
+        .features-modern-row {
+            margin-left: 0;
+            margin-right: 0;
+        }
+        .feature-modern-card {
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 2px 12px rgba(44,62,80,0.07);
+            border: 1.5px solid #e0e0e0;
+            transition: box-shadow 0.2s, transform 0.2s, border-color 0.2s;
+            cursor: pointer;
+            min-width: 180px;
+        }
+        .feature-modern-card:hover, .feature-modern-card:active {
+            box-shadow: 0 8px 24px rgba(44,62,80,0.13);
+            border-color: #25d366;
+            transform: translateY(-4px) scale(1.04);
+        }
+        .icon-bg {
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #25d366 60%, #eaf6f3 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #fff;
+            font-size: 2em;
+            box-shadow: 0 2px 8px rgba(37,211,102,0.08);
+        }
+        .bg-func {
+            background: linear-gradient(135deg, #2c3e50 60%, #eaf6f3 100%);
+        }
+        .bg-gen {
+            background: linear-gradient(135deg, #e74c3c 60%, #eaf6f3 100%);
+        }
+        .feature-modern-card .fw-bold {
+            font-size: 1.18em;
+        }
+        .feature-subtext {
+            font-size: 0.98em;
+            color: #444;
+            font-weight: 400;
+        }
+        @media (max-width: 767px) {
+            .features-modern-row .col-12 {
+                margin-bottom: 1.2rem;
+            }
+            .feature-modern-card {
+                min-width: 0;
+                padding: 1.2rem 0.7rem;
+            }
+        }
+        .features-scroll-row {
+            scrollbar-width: thin;
+            scrollbar-color: #25d366 #eaf6f3;
+        }
+        .min-width-feature-modern {
+            min-width: 220px;
+            max-width: 270px;
+        }
+        @media (min-width: 768px) {
+            .features-scroll-row {
+                flex-wrap: wrap !important;
+                overflow: visible !important;
+                justify-content: center;
+            }
+            .min-width-feature-modern {
+                min-width: 0;
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">DAHIYA GENERATORS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home">होम</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#products">जनरेटर</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#features">सुविधाएं</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact">संपर्क करें</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section p-0" style="height:auto;min-height:60vh;">
+        <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="images/WhatsApp Image 2025-05-09 at 12.44.29 PM.jpeg" class="d-block w-100" alt="Generator Image 1" style="max-height:500px;object-fit:cover;">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/WhatsApp Image 2025-05-09 at 12.44.30 PM.jpeg" class="d-block w-100" alt="Generator Image 2" style="max-height:500px;object-fit:cover;">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/WhatsApp Image 2025-05-09 at 12.44.30 PM (1).jpeg" class="d-block w-100" alt="Generator Image 3" style="max-height:500px;object-fit:cover;">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/WhatsApp Image 2025-05-09 at 12.44.31 PM.jpeg" class="d-block w-100" alt="Generator Image 4" style="max-height:500px;object-fit:cover;">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/WhatsApp Image 2025-05-09 at 12.44.31 PM (1).jpeg" class="d-block w-100" alt="Generator Image 5" style="max-height:500px;object-fit:cover;">
+                </div>
+                <div class="carousel-item">
+                    <img src="images/WhatsApp Image 2025-05-09 at 12.44.31 PM (2).jpeg" class="d-block w-100" alt="Generator Image 6" style="max-height:500px;object-fit:cover;">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="container text-center position-absolute top-50 start-50 translate-middle" style="z-index:2;">
+            <h1 class="display-4 mb-4 text-shadow" style="color:#fff;">DAHIYA GENERATORS</h1>
+            <p class="lead mb-4 text-shadow" style="color:#fff;">सभी प्रकार के जनरेटर उपलब्ध हैं | All Types Generators are Available Here</p>
+            <a href="#products" class="btn btn-primary btn-lg">जनरेटर देखें</a>
+        </div>
+    </section>
+
+    <!-- Generator Capacities Section -->
+    <section class="py-4 bg-light">
+        <div class="container text-center">
+            <h2 class="mb-3">हमारे पास उपलब्ध जनरेटर क्षमताएँ</h2>
+            <div class="mb-0">
+                <span class="badge-capacity">5 kw</span>
+                <span class="badge-capacity">7.5 kw</span>
+                <span class="badge-capacity">15 kw</span>
+                <span class="badge-capacity">18 kw</span>
+                <span class="badge-capacity">20 kw</span>
+                <span class="badge-capacity">25 kw</span>
+                <span class="badge-capacity">32 kw</span>
+                <span class="badge-capacity">62 kw</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">हमारे जनरेटर</h2>
+            <div class="row justify-content-center mb-4">
+                <div class="col-6 col-sm-4 col-md-2 mb-3">
+                    <img src="images/WhatsApp Image 2025-05-09 at 12.44.29 PM.jpeg" class="img-fluid rounded-circle shadow generator-thumb" alt="Generator 1" style="aspect-ratio:1/1;object-fit:cover;cursor:pointer;" data-full="images/WhatsApp Image 2025-05-09 at 12.44.29 PM.jpeg">
+                </div>
+                <div class="col-6 col-sm-4 col-md-2 mb-3">
+                    <img src="images/WhatsApp Image 2025-05-09 at 12.44.30 PM.jpeg" class="img-fluid rounded-circle shadow generator-thumb" alt="Generator 2" style="aspect-ratio:1/1;object-fit:cover;cursor:pointer;" data-full="images/WhatsApp Image 2025-05-09 at 12.44.30 PM.jpeg">
+                </div>
+                <div class="col-6 col-sm-4 col-md-2 mb-3">
+                    <img src="images/WhatsApp Image 2025-05-09 at 12.44.30 PM (1).jpeg" class="img-fluid rounded-circle shadow generator-thumb" alt="Generator 3" style="aspect-ratio:1/1;object-fit:cover;cursor:pointer;" data-full="images/WhatsApp Image 2025-05-09 at 12.44.30 PM (1).jpeg">
+                </div>
+                <div class="col-6 col-sm-4 col-md-2 mb-3">
+                    <img src="images/WhatsApp Image 2025-05-09 at 12.44.31 PM.jpeg" class="img-fluid rounded-circle shadow generator-thumb" alt="Generator 4" style="aspect-ratio:1/1;object-fit:cover;cursor:pointer;" data-full="images/WhatsApp Image 2025-05-09 at 12.44.31 PM.jpeg">
+                </div>
+                <div class="col-6 col-sm-4 col-md-2 mb-3">
+                    <img src="images/WhatsApp Image 2025-05-09 at 12.44.31 PM (1).jpeg" class="img-fluid rounded-circle shadow generator-thumb" alt="Generator 5" style="aspect-ratio:1/1;object-fit:cover;cursor:pointer;" data-full="images/WhatsApp Image 2025-05-09 at 12.44.31 PM (1).jpeg">
+                </div>
+                <div class="col-6 col-sm-4 col-md-2 mb-3">
+                    <img src="images/WhatsApp Image 2025-05-09 at 12.44.31 PM (2).jpeg" class="img-fluid rounded-circle shadow generator-thumb" alt="Generator 6" style="aspect-ratio:1/1;object-fit:cover;cursor:pointer;" data-full="images/WhatsApp Image 2025-05-09 at 12.44.31 PM (2).jpeg">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-12">
+                    <div class="card product-card text-center p-4">
+                        <h4 class="mb-3">सभी प्रकार के जनरेटर उपलब्ध हैं</h4>
+                        <p class="hindi-text">हमारे पास 5 kw, 7.5 kw, 15 kw, 18 kw, 20 kw, 25 kw, 32 kw, 62 kw की क्षमताओं में जनरेटर उपलब्ध हैं।</p>
+                        <p>All Types Generators are Available Here: <br>5 kw, 7.5 kw, 15 kw, 18 kw, 20 kw, 25 kw, 32 kw, 62 kw</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-5 bg-light position-relative">
+        <hr class="mb-5" style="border:0;border-top:2px solid #e0e0e0;opacity:0.5;width:60px;margin:auto;">
+        <div class="container">
+            <h2 class="text-center mb-5">हमारी विशेषताएं</h2>
+            <div class="features-scroll-row d-flex flex-row flex-nowrap gap-4 overflow-auto">
+                <div class="feature-modern-card text-center p-4 fade-in-up min-width-feature-modern">
+                    <div class="icon-bg mb-3 mx-auto"><i class="fas fa-piggy-bank fa-2x"></i></div>
+                    <div class="fw-bold fs-5 mb-1">सर्वश्रेष्ठ दरें</div>
+                    <div class="feature-subtext">Best Rates - <span class="text-muted">किफायती और प्रतिस्पर्धी मूल्य</span></div>
+                </div>
+                <div class="feature-modern-card text-center p-4 fade-in-up min-width-feature-modern" style="animation-delay:0.1s;">
+                    <div class="icon-bg bg-func mb-3 mx-auto"><i class="fas fa-calendar-check fa-2x"></i></div>
+                    <div class="fw-bold fs-5 mb-1">सभी फंक्शन के लिए उपलब्ध</div>
+                    <div class="feature-subtext">Available for All Functions - <span class="text-muted">शादी, पार्टी, इवेंट्स आदि</span></div>
+                </div>
+                <div class="feature-modern-card text-center p-4 fade-in-up min-width-feature-modern" style="animation-delay:0.2s;">
+                    <div class="icon-bg bg-gen mb-3 mx-auto"><i class="fas fa-cogs fa-2x"></i></div>
+                    <div class="fw-bold fs-5 mb-1">सभी प्रकार के जनरेटर</div>
+                    <div class="feature-subtext">All Kinds of Generators - <span class="text-muted">हर जरूरत के लिए</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+        <div class="container">
+            <h2 class="text-center mb-5">संपर्क करें</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <form id="contactForm">
+                        <div class="mb-3">
+                            <input type="text" class="form-control" id="name" placeholder="आपका नाम" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="email" class="form-control" id="email" placeholder="आपका ईमेल" required>
+                        </div>
+                        <div class="mb-3">
+                            <input type="tel" class="form-control" id="phone" placeholder="फोन नंबर" required>
+                        </div>
+                        <div class="mb-3">
+                            <textarea class="form-control" id="message" rows="5" placeholder="आपका संदेश" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">संदेश भेजें</button>
+                    </form>
+                </div>
+                <div class="col-md-6">
+                    <div class="contact-info-modern">
+                        <h4 class="mb-4 text-center">हमारे संपर्क विवरण</h4>
+                        <div class="row g-3">
+                            <div class="col-12 col-md-12">
+                                <div class="card contact-card flex-row align-items-center p-3 mb-2">
+                                    <div class="flex-grow-1">
+                                        <div class="fw-bold mb-1"><i class="fas fa-user me-2 text-primary"></i> मोहित दहिया</div>
+                                        <div class="mb-2"><a href="tel:9671157738" class="text-dark text-decoration-none"><i class="fas fa-phone-alt me-2 text-success"></i>9671157738</a></div>
+                                    </div>
+                                    <a href="https://wa.me/919671157738?text=नमस्ते%2C%20मुझे%20जनरेटर%20की%20आवश्यकता%20है%2C%20कृपया%20विवरण%20शेयर%20करें" class="btn btn-success d-flex align-items-center gap-2 px-3 py-2" target="_blank" style="white-space:nowrap;"><i class="fab fa-whatsapp"></i> मैसेज करें</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <div class="card contact-card flex-row align-items-center p-3 mb-2">
+                                    <div class="flex-grow-1">
+                                        <div class="fw-bold mb-1"><i class="fas fa-user me-2 text-primary"></i> अमित दहिया</div>
+                                        <div class="mb-2"><a href="tel:9991519955" class="text-dark text-decoration-none"><i class="fas fa-phone-alt me-2 text-success"></i>9991519955</a></div>
+                                    </div>
+                                    <a href="https://wa.me/919991519955?text=नमस्ते%2C%20मुझे%20जनरेटर%20की%20आवश्यकता%20है%2C%20कृपया%20विवरण%20शेयर%20करें" class="btn btn-success d-flex align-items-center gap-2 px-3 py-2" target="_blank" style="white-space:nowrap;"><i class="fab fa-whatsapp"></i> मैसेज करें</a>
+                                </div>
+                            </div>
+                            <div class="col-12 col-md-12">
+                                <div class="card contact-card flex-row align-items-center p-3 mb-2">
+                                    <div class="flex-grow-1">
+                                        <div class="fw-bold mb-1"><i class="fas fa-user me-2 text-primary"></i> अरुण दहिया</div>
+                                        <div class="mb-2"><a href="tel:9050051166" class="text-dark text-decoration-none"><i class="fas fa-phone-alt me-2 text-success"></i>9050051166</a></div>
+                                    </div>
+                                    <a href="https://wa.me/919050051166?text=नमस्ते%2C%20मुझे%20जनरेटर%20की%20आवश्यकता%20है%2C%20कृपया%20विवरण%20शेयर%20करें" class="btn btn-success d-flex align-items-center gap-2 px-3 py-2" target="_blank" style="white-space:nowrap;"><i class="fab fa-whatsapp"></i> मैसेज करें</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-gradient text-white py-4">
+        <div class="container text-center">
+            <p class="mb-2">&copy; 2024 DAHIYA GENERATORS. सर्वाधिकार सुरक्षित।</p>
+            <p class="mb-0">Main Bus Stand, Nahra, Sonipat - 131103</p>
+            <div class="social-links mt-2">
+                <a href="#" class="text-white me-3"><i class="fab fa-facebook"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="text-white me-3"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Float Button -->
+    <a href="https://wa.me/919671157738?text=नमस्ते%2C%20मुझे%20जनरेटर%20की%20आवश्यकता%20है%2C%20कृपया%20विवरण%20शेयर%20करें" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Generator Image Modal -->
+    <div class="modal fade" id="generatorImageModal" tabindex="-1" aria-labelledby="generatorImageModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content bg-transparent border-0">
+          <button type="button" class="btn-close btn-close-white position-absolute top-0 end-0 m-3 z-3" data-bs-dismiss="modal" aria-label="Close" style="font-size:2rem;"></button>
+          <img id="generatorModalImg" src="" alt="Generator Full" class="w-100 rounded-4 shadow-lg" style="background:#fff;object-fit:contain;max-height:80vh;">
+        </div>
+      </div>
+    </div>
+    <script>
+    document.getElementById('contactForm').addEventListener('submit', function(e) {
+        e.preventDefault();
+        var name = document.getElementById('name').value.trim();
+        var email = document.getElementById('email').value.trim();
+        var phone = document.getElementById('phone').value.trim();
+        var message = document.getElementById('message').value.trim();
+        var whatsappMessage =
+            'नमस्ते,\n' +
+            'मुझे जनरेटर के बारे में जानकारी चाहिए।\n' +
+            'नाम: ' + name + '\n' +
+            'ईमेल: ' + email + '\n' +
+            'फोन: ' + phone + '\n' +
+            'संदेश: ' + message;
+        var url = 'https://wa.me/919671157738?text=' + encodeURIComponent(whatsappMessage);
+        window.open(url, '_blank');
+    });
+    // Generator image modal logic
+    document.querySelectorAll('.generator-thumb').forEach(function(img) {
+      img.addEventListener('click', function() {
+        var fullImg = this.getAttribute('data-full');
+        document.getElementById('generatorModalImg').src = fullImg;
+        var modal = new bootstrap.Modal(document.getElementById('generatorImageModal'));
+        modal.show();
+      });
+    });
+    </script>
+</body>
+</html> 
